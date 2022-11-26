@@ -5,7 +5,7 @@ import pandas as pd
 
 # -------------- app config ---------------
 
-st.set_page_config(page_title="Ophthalmic Flashcards", page_icon="🚀",layout="wide")
+st.set_page_config(page_title="Ophthalmic Flashcards", page_icon="book04.ico",layout="centered")
 st.title("Ophthalmic Flashcards")
 
 padding_top = 0
