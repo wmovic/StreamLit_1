@@ -6,9 +6,19 @@ import pandas as pd
 # -------------- app config ---------------
 
 st.set_page_config(page_title="Ophthalmic Flashcards", page_icon="book04.ico",layout="centered")
+padding_top = 0
+st.markdown(f"""
+    <style>
+        .reportview-container .main .block-container{{
+            padding-top: {padding_top}rem;
+        }}
+    </style>""",
+    unsafe_allow_html=True,
+)
+
 st.title("Ophthalmic Flashcards")
 
-padding_top = 0
+
 st.markdown(""" <style> .big-font {font-size:16px !important; } </style> """, unsafe_allow_html=True)
 st.markdown(""" <style> .big-font_red {font-size:12px !important; font-color:Red;} </style> """, unsafe_allow_html=True)
 
