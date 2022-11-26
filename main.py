@@ -8,11 +8,11 @@ import pandas as pd
 st.set_page_config(page_title="Ophthalmic Flashcards", page_icon="🚀",layout="wide")
 
 padding_top = 0
-st.markdown(""" <style> .big-font {font-size:40px !important; } </style> """, unsafe_allow_html=True)
-st.markdown(""" <style> .big-font_red {font-size:40px !important; font-color:Red;} </style> """, unsafe_allow_html=True)
+st.markdown(""" <style> .big-font {font-size:16px !important; } </style> """, unsafe_allow_html=True)
+st.markdown(""" <style> .big-font_red {font-size:12px !important; font-color:Red;} </style> """, unsafe_allow_html=True)
 
 st.markdown(""" <style> .title-font
-{font-size:70px !important;
+{font-size:30px !important;
 fomt-weight:700;
 text-align: center;
 padding-bottom: {0}rem;
@@ -83,7 +83,7 @@ df = pd.read_excel("test2.xlsx")
 # how many rows were returned?
 no=df.shape[0]
 
-col1, col2, col3 = st.columns([1,1,4])
+col1, col2 = st.columns([1,1])
 
 with col1:
     st.button('Ask question', on_click=callback)  ##, key="Draw")
@@ -91,7 +91,7 @@ with col2:
     st.button('Show answer', on_click=callback2)  ##, key="Answer")
 st.write('')
 st.write('')
-st.write('')
+
 
 if  (st.session_state.button_clicked) and (st.session_state.firstTime==False):
     # randomly select question number and make sure doesn't repeat
