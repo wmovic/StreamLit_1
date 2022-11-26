@@ -90,9 +90,9 @@ no=df.shape[0]
 col1, col2 = st.columns(2)
 
 #with col1:
-    col1.button('Ask question', on_click=callback)  ##, key="Draw")
+col1.button('Ask question', on_click=callback)  ##, key="Draw")
 #with col2:
-    col2.button('Show answer', on_click=callback2)  ##, key="Answer")
+col2.button('Show answer', on_click=callback2)  ##, key="Answer")
 st.write('')
 st.write('')
 
