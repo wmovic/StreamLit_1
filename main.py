@@ -13,7 +13,7 @@ st.title("Ophthalmic Flashcards")
 
 
 st.markdown(""" <style> .big-font {font-size:16px !important; } </style> """, unsafe_allow_html=True)
-st.markdown(""" <style> .big-font_red {font-size:12px !important; font-color:Red;} </style> """, unsafe_allow_html=True)
+st.markdown(""" <style> .big-font_red {font-size:16px !important; font-color:Red;} </style> """, unsafe_allow_html=True)
 
 st.markdown(""" <style> .title-font
 {font-size:30px !important;
@@ -105,15 +105,15 @@ if  (st.session_state.button_clicked) and (st.session_state.firstTime==False):
     st.session_state.lastChoice = st.session_state.q_no
 
     if st.session_state.button2_clicked:
-        st.markdown('<p class="big-font">' + excel_data_df[0][st.session_state.q_no_temp] + '</p>', unsafe_allow_html=True)
+        st.markdown('<p class="big-font">Question: ' + excel_data_df[0][st.session_state.q_no_temp] + '</p>', unsafe_allow_html=True)
     else:
-        st.markdown('<p class="big-font">' + excel_data_df[0][st.session_state.q_no] + '</p>', unsafe_allow_html=True)
+        st.markdown('<p class="big-font">Question: ' + excel_data_df[0][st.session_state.q_no] + '</p>', unsafe_allow_html=True)
         st.session_state.q_no_temp = st.session_state.q_no
 
         ##if st.button("Show answer", on_click=callback2, key="Answer"):
     if (st.session_state.button2_clicked):
         #st.markdown("""<hr style="height:5px;border:none;color:#333;background-color:#333;padding-top: {0}rem;" /> """, unsafe_allow_html=True)
-        st.markdown('<p class="big-font_red">Answer:' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
+        st.markdown('<p class="big-font_red">Answer: ' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
         st.session_state.button2_clicked = False
 
     st.session_state.firstTime = False
