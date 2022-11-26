@@ -6,6 +6,7 @@ import pandas as pd
 # -------------- app config ---------------
 
 st.set_page_config(page_title="Ophthalmic Flashcards", page_icon="🚀",layout="wide")
+st.title("Ophthalmic Flashcards")
 
 padding_top = 0
 st.markdown(""" <style> .big-font {font-size:16px !important; } </style> """, unsafe_allow_html=True)
@@ -68,7 +69,7 @@ if "q_no_temp" not in st.session_state:
 
 # ---------------- Main page ----------------
 
-st.markdown('<p class="title-font">Ophthalmic Flashcards</p>', unsafe_allow_html=True)
+#st.markdown('<p class="title-font">Ophthalmic Flashcards</p>', unsafe_allow_html=True)
 st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;padding-top: {0}rem;" /> """, unsafe_allow_html=True)
 ###st.write(":heavy_minus_sign:" * 32)
 
