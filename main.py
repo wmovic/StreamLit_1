@@ -6,15 +6,8 @@ import pandas as pd
 # -------------- app config ---------------
 
 st.set_page_config(page_title="Ophthalmic Flashcards", page_icon="book04.ico",layout="centered")
-padding_top = 0
-st.markdown(f"""
-    <style>
-        .reportview-container .main .block-container{{
-            padding-top: {padding_top}rem;
-        }}
-    </style>""",
-    unsafe_allow_html=True,
-)
+st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
+
 
 st.title("Ophthalmic Flashcards")
 
@@ -94,12 +87,12 @@ df = pd.read_excel("test2.xlsx")
 # how many rows were returned?
 no=df.shape[0]
 
-col1, col2 = st.columns([1,1])
+col1, col2 = st.columns(2)
 
-with col1:
-    st.button('Ask question', on_click=callback)  ##, key="Draw")
-with col2:
-    st.button('Show answer', on_click=callback2)  ##, key="Answer")
+#with col1:
+    col1.button('Ask question', on_click=callback)  ##, key="Draw")
+#with col2:
+    col2.button('Show answer', on_click=callback2)  ##, key="Answer")
 st.write('')
 st.write('')
 
