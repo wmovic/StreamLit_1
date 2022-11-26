@@ -70,7 +70,7 @@ if "q_no_temp" not in st.session_state:
 # ---------------- Main page ----------------
 
 #st.markdown('<p class="title-font">Ophthalmic Flashcards</p>', unsafe_allow_html=True)
-st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;padding-top: {0}rem;" /> """, unsafe_allow_html=True)
+##st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;padding-top: {0}rem;" /> """, unsafe_allow_html=True)
 ###st.write(":heavy_minus_sign:" * 32)
 
 excel_data_df = pd.read_excel('test2.xlsx', sheet_name='Sheet1',header=None)
