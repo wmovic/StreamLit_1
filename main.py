@@ -5,8 +5,11 @@ import pandas as pd
 
 # -------------- app config ---------------
 
+
 st.set_page_config(page_title="Ophthalmic Flashcards", page_icon="book04.ico",layout="centered")
 st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
+
+
 
 
 st.title("Ophthalmic Flashcards")
@@ -116,8 +119,16 @@ if  (st.session_state.button_clicked) and (st.session_state.firstTime==False):
 
 #print(f'Welcome to {website}!')
         st.markdown(f"**{'name'}**{'short_name'}", unsafe_allow_html=True)
-        st.markdown(f**{Answer: }**{excel_data_df[1][st.session_state.q_no_temp]}, unsafe_allow_html=True)
-        st.markdown('<p class="big-font_red">Answer: ' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
+        jjj="YES"
+        kkk='this is a test'
+        ANS="<div><span class='bold'>Answer: </span>" + excel_data_df[1][st.session_state.q_no_temp] + "</div>"
+        JWS="<div><span class='bold'>Answer: </span>" + jjj + "</div>"
+        MMM="<div><span class='bold'>Answer: </span>" + kkk + "</div>"
+        print(JWS)
+        print(MMM)
+        ###st.markdown('<p class="big-font_red">Answer: ' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
+        st.markdown(ANS, unsafe_allow_html=True)
+        st.markdown(JWS, unsafe_allow_html=True)
         st.session_state.button2_clicked = False
 
     st.session_state.firstTime = False
