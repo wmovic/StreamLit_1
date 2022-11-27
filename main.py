@@ -116,7 +116,7 @@ if  (st.session_state.button_clicked) and (st.session_state.firstTime==False):
 
 #print(f'Welcome to {website}!')
         st.markdown(f"**{'name'}**{'short_name'}", unsafe_allow_html=True)
-        st.markdown(f"**Answer: **"{excel_data_df[1][st.session_state.q_no_temp]}, unsafe_allow_html=True)
+        st.markdown(f**{Answer: }**{excel_data_df[1][st.session_state.q_no_temp]}, unsafe_allow_html=True)
         st.markdown('<p class="big-font_red">Answer: ' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
         st.session_state.button2_clicked = False
 
