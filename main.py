@@ -114,7 +114,7 @@ if  (st.session_state.button_clicked) and (st.session_state.firstTime==False):
     if (st.session_state.button2_clicked):
         #st.markdown("""<hr style="height:5px;border:none;color:#333;background-color:#333;padding-top: {0}rem;" /> """, unsafe_allow_html=True)
         st.markdown(f"**{'name'}**{'short_name'}", unsafe_allow_html=True)
-        st.markdown(f"**{'Answer: '}**{excel_data_df[1][st.session_state.q_no_temp]"}, unsafe_allow_html=True)
+        st.markdown(f"**{'Answer: '}**{excel_data_df[1][st.session_state.q_no_temp]"}), unsafe_allow_html=True)
         st.markdown('<p class="big-font_red">Answer: ' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
         st.session_state.button2_clicked = False
 
