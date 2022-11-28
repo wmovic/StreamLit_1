@@ -108,9 +108,9 @@ if  (st.session_state.button_clicked) and (st.session_state.firstTime==False):
     st.session_state.lastChoice = st.session_state.q_no
 
     if st.session_state.button2_clicked:
-        st.markdown('<p class="big-font">Question: ' + excel_data_df[0][st.session_state.q_no_temp] + '</p>', unsafe_allow_html=True)
+        st.markdown('<p class="big-font">QUESTION: ' + excel_data_df[0][st.session_state.q_no_temp] + '</p>', unsafe_allow_html=True)
     else:
-        st.markdown('<p class="big-font">Question: ' + excel_data_df[0][st.session_state.q_no] + '</p>', unsafe_allow_html=True)
+        st.markdown('<p class="big-font">QUESTION: ' + excel_data_df[0][st.session_state.q_no] + '</p>', unsafe_allow_html=True)
         st.session_state.q_no_temp = st.session_state.q_no
 
         ##if st.button("Show answer", on_click=callback2, key="Answer"):
@@ -126,7 +126,7 @@ if  (st.session_state.button_clicked) and (st.session_state.firstTime==False):
         MMM="<div><span class='bold'>Answer: </span>" + kkk + "</div>"
         #print(JWS)
         #print(MMM)
-        st.markdown('<p class="big-font_red">Answer: ' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
+        st.markdown('<p class="big-font_red">ANSWER: ' + excel_data_df[1][st.session_state.q_no_temp]+ '</p>', unsafe_allow_html=True)
         #st.markdown(ANS, unsafe_allow_html=True)
         #st.markdown(JWS, unsafe_allow_html=True)
         st.session_state.button2_clicked = False
